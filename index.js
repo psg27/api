@@ -66,14 +66,14 @@ app.get("/", (_req, res) => {
 // Middlewares
 app.use(morgan("dev"));
 app.use(express.json());
-app.use(favicon(file));
+//app.use(favicon(file));
 app.use(cors());
 
 
 // Routes
 app.use(require("./src/routes/login.routes"));
 app.use("/usuarios/", require("./src/routes/usuarios.routes"));
-app.use("/admin/", require("./src/routes/admin.routes"));
+/*app.use("/admin/", require("./src/routes/admin.routes"));
 app.use("/cuentasPagar/", require("./src/routes/cuentasPagar.routes"));
 app.use("/doctores/", require("./src/routes/doctores.routes"));
 app.use("/entregas/", require("./src/routes/entregas.routes"));
@@ -113,7 +113,7 @@ app.use("/preciosOrden/", require("./src/routes/preciosOrden.routes"));
 app.use("/saldosCliente/", require("./src/routes/saldosCliente.routes"));
 app.use("/mensajerosGastos/", require("./src/routes/mensajerosGastos.routes"));
 app.use("/abonosOrdenes/", require("./src/routes/abonosOrdenes.routes"));
-
+*/
 app.use(notFound);
 app.use(Sentry.Handlers.errorHandler());
 app.use(handleErrors);
