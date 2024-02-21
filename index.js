@@ -87,7 +87,7 @@ app.use("/proveedores/", require("./src/routes/proveedores.routes"));
 app.use("/reportes/", require("./src/routes/reportes.routes"));
 app.use("/rutas/", require("./src/routes/rutas.routes"));
 app.use("/configuracionRutas/", require("./src/routes/configuracionRutas.routes"));
-app.use("/servicios/", require("./src/routes/servicios.routes"));
+//app.use("/servicios/", require("./src/routes/servicios.routes"));
 app.use("/visitas/", require("./src/routes/visitas.routes"));
 app.use("/almacenProductosLimpieza/", require("./src/routes/almacenProductosLimpieza.routes"));
 app.use("/almacenMateriasPrimas/", require("./src/routes/almacenMateriasPrimas.routes"));
@@ -123,5 +123,5 @@ const server = app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
 
-module.exports = app ;
+module.exports = {server, app} ;
 
