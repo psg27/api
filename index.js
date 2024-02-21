@@ -39,7 +39,7 @@ app.use(Sentry.Handlers.requestHandler());
 app.use(Sentry.Handlers.tracingHandler());
 
 // Configuracion para desplegar
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 5050;
 
 app.all("*", (req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
