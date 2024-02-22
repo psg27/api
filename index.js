@@ -73,7 +73,7 @@ app.use(cors());
 // Routes
 app.use(require("./src/routes/login.routes"));
 app.use("/usuarios/", require("./src/routes/usuarios.routes"));
-/*app.use("/admin/", require("./src/routes/admin.routes"));
+app.use("/admin/", require("./src/routes/admin.routes"));
 app.use("/cuentasPagar/", require("./src/routes/cuentasPagar.routes"));
 app.use("/doctores/", require("./src/routes/doctores.routes"));
 app.use("/entregas/", require("./src/routes/entregas.routes"));
@@ -87,7 +87,7 @@ app.use("/proveedores/", require("./src/routes/proveedores.routes"));
 app.use("/reportes/", require("./src/routes/reportes.routes"));
 app.use("/rutas/", require("./src/routes/rutas.routes"));
 app.use("/configuracionRutas/", require("./src/routes/configuracionRutas.routes"));
-//app.use("/servicios/", require("./src/routes/servicios.routes"));
+app.use("/servicios/", require("./src/routes/servicios.routes"));
 app.use("/visitas/", require("./src/routes/visitas.routes"));
 app.use("/almacenProductosLimpieza/", require("./src/routes/almacenProductosLimpieza.routes"));
 app.use("/almacenMateriasPrimas/", require("./src/routes/almacenMateriasPrimas.routes"));
@@ -113,7 +113,7 @@ app.use("/preciosOrden/", require("./src/routes/preciosOrden.routes"));
 app.use("/saldosCliente/", require("./src/routes/saldosCliente.routes"));
 app.use("/mensajerosGastos/", require("./src/routes/mensajerosGastos.routes"));
 app.use("/abonosOrdenes/", require("./src/routes/abonosOrdenes.routes"));
-*/
+
 app.use(notFound);
 app.use(Sentry.Handlers.errorHandler());
 app.use(handleErrors);
@@ -123,5 +123,5 @@ const server = app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
 
-module.exports = {server, app} ;
+module.exports = app ;
 

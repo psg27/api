@@ -140,7 +140,7 @@ router.put("/actualizarDepartamento/:id", async (req, res) => {
         .then((data) => res.status(200).json({ mensaje: "Departamento asignado al servicio servicio actualizado" }))
         .catch((error) => res.json({ message: error }));
 });
-/*
+
 // Obtener el numero de venta
 router.get("/obtenerNoODT", async (req, res) => {
     const registroServicio = await servicios.find().count();
@@ -152,6 +152,6 @@ router.get("/obtenerNoODT", async (req, res) => {
         const tempFolio = parseInt(tempFolio1[1]) + 1;
         res.status(200).json({ noOrden: "ODT-" + tempFolio.toString().padStart(1, 0) })
     }
-});*/
+});
 
 module.exports = router;
